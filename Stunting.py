@@ -18,11 +18,11 @@ st.write("Aplikasi ini menggunakan model Random Forest untuk memprediksi kemungk
 
 gender = st.selectbox("Jenis Kelamin", ["Laki-laki", "Perempuan"])
 gender_int = 0 if gender == "Laki-laki" else 1
-age = st.number_input("Umur (bulan)", min_value=0, max_value=50, step=1)
-birth_weight = st.number_input("Berat Lahir (kg)", min_value=0., max_value=10.0, step=0.1)
-birth_length = st.number_input("Panjang Lahir (cm)", min_value=0, step=1)
-body_weight = st.number_input("Berat Badan Sekarang (kg)", min_value=0., max_value=25.0,step=0.1)
-body_length = st.number_input("Panjang Badan Sekarang (cm)", min_value=0., max_value=100.0, step=0.1)
+age = st.number_input("Umur (bulan)", min_value=0, max_value=60, step=1)
+birth_weight = st.number_input("Berat Lahir (kg)", min_value=0.0, max_value=10.0, step=0.1)
+birth_length = st.number_input("Panjang Lahir (cm) ", min_value=0, step=1)
+body_weight = st.number_input("Berat Badan Sekarang (kg)", min_value=0.0, max_value=25.0,step=0.1)
+body_length = st.number_input("Panjang Badan Sekarang (cm)", min_value=0.0, max_value=100.0, step=0.1)
 
 input_data = np.array([[gender_int, age, 
                         birth_weight, birth_length, 
